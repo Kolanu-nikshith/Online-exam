@@ -78,160 +78,160 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 			<div class="modal-body">
 				
 				<form action="addtest.php" role="form" name="addtest" id="addtest" method="POST">
-					<div class='col-md-12'>
-					<div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon">
-							<span class="glyphicon glyphicon-user"></span>
-							</span>
-							<input type="text" name="name" id="name" class="form-control" placeholder="Enter test name" />
-						</div>
-					</div>
-					</div>
-					<div class='col-md-12'>
-					 <div class="form-group">
-							<p style="color: white;">Select subject:</p>
-
-					    <select class="form-control" id="subs" name="subs">
-						    <?php 
-					 $query1 = "SELECT subname FROM subjects";
-						if ($result1=mysqli_query($db,$query1))
-						{
-										  // Fetch one and one row
-						 while ($row=mysqli_fetch_row($result1))
-							    {echo "<option>";
-						echo $row[0];echo "</option>";
-							    }
-							  // Free result set
-							  mysqli_free_result($result1);
-						}
-
-					?>
-						    
-					    </select>
-
-					 </div>
-					</div>
-					<p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;Select exam time range:</p>
-					<div class='col-md-6'>
-				        <div class="form-group">
-				        	
-				            <div class='input-group date' id='datetimepicker6'>
-				                <input type='text' class="form-control" />
-				                <span class="input-group-addon">
-				                    <span class="glyphicon glyphicon-calendar"></span>
-				                </span>
-				            </div>
-				        </div>
-    				</div>
-				    <div class='col-md-6'>
-				        <div class="form-group">
-				            <div class='input-group date' id='datetimepicker7'>
-				                <input type='text' class="form-control" />
-				                <span class="input-group-addon">
-				                    <span class="glyphicon glyphicon-calendar"></span>
-				                </span>
-				            </div>
-				        </div>
-				    </div>
-				    <p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;Select exam duration:</p>
-				    <div class="col-md-6">
-				     <div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon">
-							<span class="glyphicon glyphicon-time"></span>
-							</span>
-							<input type="time" name="duration" id="duration" class="form-control"/>
-						</div>
-					 </div>
-					</div>
-					<div class="col-md-6">
-				     <div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon">
-							<span class="glyphicon glyphicon-question-sign"></span>
-							</span>
-							<input type="text" name="tques" id="tques" class="form-control" placeholder="Total number of questions" />
-						</div>
-					 </div>
-					</div>
-
-					<div class="col-md-6">
-				     <div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon">
-							<span class="glyphicon glyphicon-question-sign"></span>
-							</span>
-							<input type="text" name="qmarks" id="qmarks" class="form-control" placeholder="Marks for each question" />
-						</div>
-					 </div>
-					</div>
-
-					<div class="col-md-6">
-				     <div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon">
-							<span class="glyphicon glyphicon-minus"></span>
-							</span>
-							<input type="text" name="nmarks" id="nmarks" class="form-control" placeholder="negative marks if any" />
-						</div>
-					 </div>
-					</div>
-					<div class='col-md-12'>
-					 <div class="form-group">
-							<p style="color: white;">Select faculty:</p>
-
-					    <select class="form-control" id="subs" name="subs">
-						    <?php 
-					 $query1 = "SELECT iname FROM faculty";
-						if ($result1=mysqli_query($db,$query1))
-						{
-										  // Fetch one and one row
-						 while ($row=mysqli_fetch_row($result1))
-							    {echo "<option>";
-						echo $row[0];echo "</option>";
-							    }
-							  // Free result set
-							  mysqli_free_result($result1);
-						}
-
-					?>
-						    
-					    </select>
-
-					 </div>
-					</div>
 						<div class='col-md-12'>
-					 <div class="form-group">
-							<p style="color: white;">Select batch:</p>
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon">
+									<span class="glyphicon glyphicon-user"></span>
+									</span>
+									<input type="text" name="name" id="name" class="form-control" placeholder="Enter test name" />
+								</div>
+							</div>
+						</div>
+						<div class='col-md-12'>
+						 <div class="form-group">
+								<p style="color: white;">Select subject:</p>
 
-					    <select class="form-control" id="batch" name="batch">
-						    <option name= "b48" value="48">2014-2018</option>
-						    <option name= "b59" value="59">2015-2019</option>
-						    <option name= "b60" value="60">2016-2020</option>
-						    <option name= "b71" value="71">2017-2021</option>
-						    <option name= "b82" value="82">2018-2022</option>				
-						    <option name= "b93" value="93">2019-2023</option>				
-						    <option name= "b04" value="04">2020-2024</option>				
-						    <option name= "b15" value="15">2021-2025</option>				
-						    		    
-					    </select>
+						    <select class="form-control" id="subs" name="subs">
+							    <?php 
+						 $query1 = "SELECT subname FROM subjects";
+							if ($result1=mysqli_query($db,$query1))
+							{
+											  // Fetch one and one row
+							 while ($row=mysqli_fetch_row($result1))
+								    {echo "<option>";
+							echo $row[0];echo "</option>";
+								    }
+								  // Free result set
+								  mysqli_free_result($result1);
+							}
 
-					 </div>
-					</div>
+						?>
+							    
+						    </select>
+
+						 </div>
+						</div>
+					<p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;Select exam time range:</p>
+						<div class='col-md-6'>
+					        <div class="form-group">
+					        	
+					            <div class='input-group date' id='datetimepicker6'>
+					                <input type='text' class="form-control" />
+					                <span class="input-group-addon">
+					                    <span class="glyphicon glyphicon-calendar"></span>
+					                </span>
+					            </div>
+					        </div>
+	    				</div>
+					    <div class='col-md-6'>
+					        <div class="form-group">
+					            <div class='input-group date' id='datetimepicker7'>
+					                <input type='text' class="form-control" />
+					                <span class="input-group-addon">
+					                    <span class="glyphicon glyphicon-calendar"></span>
+					                </span>
+					            </div>
+					        </div>
+					    </div>
+				    <p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;Select exam duration:</p>
+					    <div class="col-md-6">
+					     <div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon">
+								<span class="glyphicon glyphicon-time"></span>
+								</span>
+								<input type="time" name="duration" id="duration" class="form-control"/>
+							</div>
+						 </div>
+						</div>
+						<div class="col-md-6">
+					     <div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon">
+								<span class="glyphicon glyphicon-question-sign"></span>
+								</span>
+								<input type="text" name="tques" id="tques" class="form-control" placeholder="Total number of questions" />
+							</div>
+						 </div>
+						</div>
+
+						<div class="col-md-6">
+					     <div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon">
+								<span class="glyphicon glyphicon-question-sign"></span>
+								</span>
+								<input type="text" name="qmarks" id="qmarks" class="form-control" placeholder="Marks for each question" />
+							</div>
+						 </div>
+						</div>
+
+						<div class="col-md-6">
+					     <div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon">
+								<span class="glyphicon glyphicon-minus"></span>
+								</span>
+								<input type="text" name="nmarks" id="nmarks" class="form-control" placeholder="negative marks if any" />
+							</div>
+						 </div>
+						</div>
+						<div class='col-md-12'>
+						 <div class="form-group">
+								<p style="color: white;">Select faculty:</p>
+
+						    <select class="form-control" id="subs" name="subs">
+							    <?php 
+						 $query1 = "SELECT iname FROM faculty";
+							if ($result1=mysqli_query($db,$query1))
+							{
+											  // Fetch one and one row
+							 while ($row=mysqli_fetch_row($result1))
+								    {echo "<option>";
+							echo $row[0];echo "</option>";
+								    }
+								  // Free result set
+								  mysqli_free_result($result1);
+							}
+
+						?>
+							    
+						    </select>
+
+						 </div>
+						</div>
+						<div class='col-md-12'>
+							 <div class="form-group">
+								<p style="color: white;">Select batch:</p>
+
+						    <select class="form-control" id="batch" name="batch">
+							    <option name= "b48" value="48">2014-2018</option>
+							    <option name= "b59" value="59">2015-2019</option>
+							    <option name= "b60" value="60">2016-2020</option>
+							    <option name= "b71" value="71">2017-2021</option>
+							    <option name= "b82" value="82">2018-2022</option>				
+							    <option name= "b93" value="93">2019-2023</option>				
+							    <option name= "b04" value="04">2020-2024</option>				
+							    <option name= "b15" value="15">2021-2025</option>				
+							    		    
+						    </select>
+
+						 </div>
+						</div>
 
 					
 
-					<div class="form-group text-center">
-						<button type="submit" class="btn " name="sign" style="background-color: #fb641b;">+Add test</button>
-										
-					</div>
+						<div class="form-group text-center">
+							<button type="submit" class="btn " name="sign" style="background-color: #fb641b;">+Add test</button>
+											
+						</div>
 				</form>
-				<div class="form-group text-center">
+					<div class="form-group text-center">
 						<button type="submit" class="btn " name="qshow" style="background-color: #fb641b;">Show Questions</button>
 										
 					</div>
-									<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 					    <!-- Indicators -->
 					    <ol class="carousel-indicators">
 					      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -249,7 +249,7 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 									     <div class="form-group">
 											<div class="input-group">
 												<span class="input-group-addon">
-												<span class="glyphicon glyphicon-question-sign"></span>
+												1
 												</span>
 												</span>
 												<input type="text" name="duration" id="duration" class="form-control" placeholder="Enter Question Here" />
@@ -270,18 +270,19 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 									   
 								    </select>
 
-								 </div>
-								</div>
-								<div class="col-md-12">
-								     <div class="form-group">
-										<div class="input-group">
-											<span class="input-group-addon">
-											1
-											</span>
-											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 1" />
-										</div>
 									 </div>
-								</div>					        	<div class="col-md-12">
+									</div>
+									<div class="col-md-12">
+									     <div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+												1
+												</span>
+												<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 1" />
+											</div>
+										 </div>
+									</div>					        	
+									<div class="col-md-12">
 								     <div class="form-group">
 										<div class="input-group">
 											<span class="input-group-addon">
@@ -290,32 +291,33 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 2" />
 										</div>
 									 </div>
-								</div>					        	<div class="col-md-12">
-								     <div class="form-group">
-										<div class="input-group">
-											<span class="input-group-addon">
-											3
-											</span>
-											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 3" />
-										</div>
-									 </div>
-								</div>					        	
-								<div class="col-md-12">
-								     <div class="form-group">
-										<div class="input-group">
-											<span class="input-group-addon">
-											4
-											</span>
-											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 4" />
-										</div>
-									 </div>
-								</div>
+									</div>			
+									<div class="col-md-12">
+									     <div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+												3
+												</span>
+												<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 3" />
+											</div>
+										 </div>
+									</div>					        	
+									<div class="col-md-12">
+									     <div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+												4
+												</span>
+												<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 4" />
+											</div>
+										 </div>
+									</div>
 
 
 					        </div><!-- question div ends here -->
 
 
-					      </div>
+					      </div><!-- div item ends here -->
 
 					      
 					      <div class="item">
@@ -326,7 +328,7 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 									     <div class="form-group">
 											<div class="input-group">
 												<span class="input-group-addon">
-												<span class="glyphicon glyphicon-question-sign"></span>
+												2
 												</span>
 												</span>
 												<input type="text" name="duration" id="duration" class="form-control" placeholder="Enter Question Here" />
@@ -404,6 +406,9 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 					      <span class="glyphicon glyphicon-chevron-right"></span>
 					      <span class="sr-only">Next</span>
 					    </a>
+					</div>
+					<div>
+						<br><br>
 					</div>
 			</div>
 		</div>
