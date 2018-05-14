@@ -18,7 +18,12 @@
 <html>
 <head>
 	<?php include('head.php');?>
-	
+	<style type="text/css">
+		#myCarousel .carousel-control{
+    top: 50%;
+    bottom: 50%;
+}
+	</style>
 </head>
 <body style="background-color: #f5f5f5;">
 	<!--Top Bar -->
@@ -130,7 +135,7 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 				        </div>
 				    </div>
 				    <p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;Select exam duration:</p>
-				    <div class="col-md-12">
+				    <div class="col-md-6">
 				     <div class="form-group">
 						<div class="input-group">
 							<span class="input-group-addon">
@@ -146,7 +151,18 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 							<span class="input-group-addon">
 							<span class="glyphicon glyphicon-question-sign"></span>
 							</span>
-							<input type="number" name="duration" id="duration" class="form-control" placeholder="Marks for each question" />
+							<input type="text" name="tques" id="tques" class="form-control" placeholder="Total number of questions" />
+						</div>
+					 </div>
+					</div>
+
+					<div class="col-md-6">
+				     <div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-question-sign"></span>
+							</span>
+							<input type="text" name="qmarks" id="qmarks" class="form-control" placeholder="Marks for each question" />
 						</div>
 					 </div>
 					</div>
@@ -157,7 +173,7 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 							<span class="input-group-addon">
 							<span class="glyphicon glyphicon-minus"></span>
 							</span>
-							<input type="number" name="duration" id="duration" class="form-control" placeholder="negative marks if any" />
+							<input type="text" name="nmarks" id="nmarks" class="form-control" placeholder="negative marks if any" />
 						</div>
 					 </div>
 					</div>
@@ -204,12 +220,191 @@ and start < DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY)";
 					 </div>
 					</div>
 
+					
+
 					<div class="form-group text-center">
 						<button type="submit" class="btn " name="sign" style="background-color: #fb641b;">+Add test</button>
 										
 					</div>
-
 				</form>
+				<div class="form-group text-center">
+						<button type="submit" class="btn " name="qshow" style="background-color: #fb641b;">Show Questions</button>
+										
+					</div>
+									<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+					    <!-- Indicators -->
+					    <ol class="carousel-indicators">
+					      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					      <li data-target="#myCarousel" data-slide-to="1"></li>
+					      <li data-target="#myCarousel" data-slide-to="2"></li>
+					    </ol>
+
+					    <!-- Wrapper for slides -->
+					    <div class="carousel-inner">
+					      <div class="item active">
+					        <div><!-- question div starts here -->
+
+
+						        	<div class="col-md-12">
+									     <div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<span class="glyphicon glyphicon-question-sign"></span>
+												</span>
+												</span>
+												<input type="text" name="duration" id="duration" class="form-control" placeholder="Enter Question Here" />
+											</div>
+										 </div>
+									</div>
+									
+									<div class='col-md-12'>
+										<p style="color: white;">Correct Answer:</p>
+									 <div class="form-group">
+									
+
+								    <select class="form-control" id="canswer" name="canswer">
+									    <option   value="1">1</option>
+									    <option   value="2">2</option>
+									    <option   value="3">3</option>
+									    <option   value="4">4</option>
+									   
+								    </select>
+
+								 </div>
+								</div>
+								<div class="col-md-12">
+								     <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon">
+											1
+											</span>
+											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 1" />
+										</div>
+									 </div>
+								</div>					        	<div class="col-md-12">
+								     <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon">
+											2
+											</span>
+											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 2" />
+										</div>
+									 </div>
+								</div>					        	<div class="col-md-12">
+								     <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon">
+											3
+											</span>
+											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 3" />
+										</div>
+									 </div>
+								</div>					        	
+								<div class="col-md-12">
+								     <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon">
+											4
+											</span>
+											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 4" />
+										</div>
+									 </div>
+								</div>
+
+
+					        </div><!-- question div ends here -->
+
+
+					      </div>
+
+					      
+					      <div class="item">
+					        <div><!-- question div starts here -->
+
+
+						        	<div class="col-md-12">
+									     <div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+												<span class="glyphicon glyphicon-question-sign"></span>
+												</span>
+												</span>
+												<input type="text" name="duration" id="duration" class="form-control" placeholder="Enter Question Here" />
+											</div>
+										 </div>
+									</div>
+									
+									<div class='col-md-12'>
+										<p style="color: white;">Correct Answer:</p>
+									 <div class="form-group">
+									
+
+								    <select class="form-control" id="canswer" name="canswer">
+									    <option   value="1">1</option>
+									    <option   value="2">2</option>
+									    <option   value="3">3</option>
+									    <option   value="4">4</option>
+									   
+								    </select>
+
+								 </div>
+								</div>
+								<div class="col-md-12">
+								     <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon">
+											1
+											</span>
+											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 1" />
+										</div>
+									 </div>
+								</div>					        	<div class="col-md-12">
+								     <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon">
+											2
+											</span>
+											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 2" />
+										</div>
+									 </div>
+								</div>					        	<div class="col-md-12">
+								     <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon">
+											3
+											</span>
+											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 3" />
+										</div>
+									 </div>
+								</div>					        	
+								<div class="col-md-12">
+								     <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon">
+											4
+											</span>
+											<input type="text" name="duration" id="duration" class="form-control" placeholder="Option 4" />
+										</div>
+									 </div>
+								</div>
+
+
+					        </div><!-- question div ends here -->
+
+
+					      </div>
+					    </div>
+
+					    <!-- Left and right controls -->
+					    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					      <span class="glyphicon glyphicon-chevron-left"></span>
+					      <span class="sr-only">Previous</span>
+					    </a>
+					    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					      <span class="glyphicon glyphicon-chevron-right"></span>
+					      <span class="sr-only">Next</span>
+					    </a>
+					</div>
 			</div>
 		</div>
 	</div>
