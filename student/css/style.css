@@ -1,0 +1,24 @@
+.modal-content{
+			background-color: #003744;
+		}
+		.btn-link{
+			color:white;
+		}
+		.modal-heading h2{
+			color:#ffffff;
+		}
+#signup .error {
+    color: red;
+}
+#addf .error {
+    color: red;
+}
+#login .error {
+    color: red;
+}
+#forgot .error {
+    color: red;
+}
+#addsub .error{
+	color:red;
+}
