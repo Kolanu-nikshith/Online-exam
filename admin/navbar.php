@@ -52,18 +52,7 @@
 					<li><a href="liveexams.php">Live Exams</li>
 
 					<li><a href="generate.php">Generate Report</li>
-					<ul class="nav navbar-nav navbar-right">
-					<form class="navbar-form navbar-left" action="">
-					  <div class="input-group">
-					    <input type="text" class="form-control" placeholder="Search">
-					    <div class="input-group-btn">
-					      <button class="btn btn-default" type="submit">
-					        <i class="glyphicon glyphicon-search"></i>
-					      </button>
-					    </div>
-					  </div>
-					</form>
-				</ul>
+					
 				<ul class="nav navbar-nav navbar-right">
 					<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">
 								<?php  if (isset($_SESSION['username'])) : ?>
@@ -138,18 +127,7 @@
 					<li><a href="generate.php">Generate Report</a></li>
 					<li><a href="">Contact Us</a></li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<form class="navbar-form navbar-left" action="">
-					  <div class="input-group">
-					    <input type="text" class="form-control" placeholder="Search">
-					    <div class="input-group-btn">
-					      <button class="btn btn-default" type="submit">
-					        <i class="glyphicon glyphicon-search"></i>
-					      </button>
-					    </div>
-					  </div>
-					</form>
-				</ul>
+				
 				<ul class="nav navbar-nav navbar-right">
 					<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">
 								<?php  if (isset($_SESSION['username'])) : ?>
